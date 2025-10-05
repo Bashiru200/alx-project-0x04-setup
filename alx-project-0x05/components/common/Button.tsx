@@ -15,6 +15,8 @@ const shapeClasses: Record<NonNullable<ButtonProps["shape"]>, string> = {
 
 const Button: React.FC<ButtonProps> = ({
   label,
+  buttonLabel,
+  buttonBackgroundColor,
   size = "medium",
   shape = "rounded-md",
   onClick,
@@ -26,9 +28,11 @@ const Button: React.FC<ButtonProps> = ({
       className={`
         bg-blue-600 text-white font-medium shadow-md 
         hover:bg-blue-700 transition-colors
-        ${sizeClasses[size]} ${shapeClasses[shape]} ${className}
+        ${sizeClasses[size]} ${shapeClasses[shape]} ${className} ${buttonBackgroundColor} ${buttonLabel} ${label}
       `}
     >
+      {buttonLabel},
+      {buttonBackgroundColor}
       {label}
     </button>
   );

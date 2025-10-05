@@ -1,6 +1,9 @@
+import React from 'react';
+import Header from '../layouts/Header';
+
 const Layout: React.FC = () => {
     return (
-        <div>New layout</div>
+        <Header />
     )
 }
 
